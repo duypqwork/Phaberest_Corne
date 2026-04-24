@@ -86,7 +86,7 @@
 
         combo_prcnt {
             bindings = <&kp PRCNT>;
-            key-positions = <29 28>;
+            key-positions = <28 29>;
             timeout-ms = <50>;
             layers = <0 1>;
         };
@@ -162,6 +162,52 @@
         };
     };
 
+    behaviors {
+        lt_esc: lt_esc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_ESC";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            flavor = "tap-preferred";
+        };
+
+        lt_spc: lt_spc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_SPC";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            retro-tap;
+        };
+
+        lt_tab: lt_tab {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_TAB";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+
+        lt_ent: lt_ent {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_ENT";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -175,19 +221,19 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE   &kp Q  &kp W  &kp E     &kp R      &kp T          &kp Y    &kp U     &kp I      &kp O    &kp P     &kp BSPC
-&lt 6 ESC   &kp A  &kp S  &kp D     &kp F      &kp G          &kp H    &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHIFT  &kp Z  &kp X  &kp C     &kp V      &kp B          &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
-                          &kp LALT  &lt 2 TAB  &lt 3 SPACE    &kp RET  &kp RGUI  &kp RCTRL
+&kp GRAVE      &kp Q  &kp W  &kp E     &kp R          &kp T              &kp Y    &kp U     &kp I      &kp O    &kp P     &kp BSPC
+&lt_esc 6 ESC  &kp A  &kp S  &kp D     &kp F          &kp G              &kp H    &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHIFT     &kp Z  &kp X  &kp C     &kp V          &kp B              &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
+                             &kp LALT  &lt_tab 2 TAB  &lt_spc 3 SPACE    &kp RET  &kp RGUI  &kp RCTRL
             >;
         };
 
         Colemak {
             bindings = <
-&kp GRAVE  &kp Q  &kp W  &kp F     &kp P      &kp B          &kp J      &kp L     &kp U      &kp Y    &kp SEMI  &kp BSPC
-&lt 6 ESC  &kp A  &kp R  &kp S     &kp T      &kp G          &kp M      &kp N     &kp E      &kp I    &kp O     &kp APOS
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp D      &kp V          &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                         &kp LALT  &lt 2 TAB  &lt 3 SPACE    &kp ENTER  &kp RGUI  &kp RCTRL
+&kp GRAVE      &kp Q  &kp W  &kp F     &kp P          &kp B              &kp J      &kp L     &kp U      &kp Y    &kp SEMI  &kp BSPC
+&lt_esc 6 ESC  &kp A  &kp R  &kp S     &kp T          &kp G              &kp M      &kp N     &kp E      &kp I    &kp O     &kp APOS
+&kp LSHFT      &kp Z  &kp X  &kp C     &kp D          &kp V              &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                             &kp LALT  &lt_tab 2 TAB  &lt_spc 3 SPACE    &kp ENTER  &kp RGUI  &kp RCTRL
             >;
         };
 
@@ -202,10 +248,10 @@
 
         NUM {
             bindings = <
-&none  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS    &kp KP_MINUS    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL     &none
-&none  &none     &none     &none      &none      &none       &kp KP_PLUS     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &none
-&none  &none     &none     &none      &none      &none       &kp KP_EQUAL    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE    &none
-                           &none      &none      &none       &lt 4 KP_ENTER  &kp KP_NUMBER_0  &none
+&none  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS    &kp KP_MINUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL     &none
+&none  &none     &none     &none      &none      &none       &kp KP_PLUS         &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &none
+&none  &none     &none     &none      &none      &none       &kp KP_EQUAL        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE    &none
+                           &none      &none      &none       &lt_ent 4 KP_ENTER  &kp KP_NUMBER_0  &none
             >;
         };
 
