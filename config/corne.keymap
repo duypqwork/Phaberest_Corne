@@ -6,12 +6,13 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     combos {
         compatible = "zmk,combos";
 
-        To_Colemak {
+        combo_to_COLEMAK {
             bindings = <&to 1>;
             key-positions = <24 35>;
             layers = <0>;
@@ -19,23 +20,145 @@
             require-prior-idle-ms = <125>;
         };
 
-        To_QWERTY {
+        combo_to_QWERTY {
             bindings = <&to 0>;
             key-positions = <35 24>;
             timeout-ms = <50>;
             require-prior-idle-ms = <125>;
             layers = <1>;
         };
-    };
 
-    behaviors {
-        tat: Toggle_And_Tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Toggle Layer And Tap";
-            bindings = <&to>, <&kp>;
+        combo_lt {
+            bindings = <&kp LT>;
+            key-positions = <2 3>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
 
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
+        combo_lbkt {
+            bindings = <&kp LBKT>;
+            key-positions = <3 4>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        combo_under {
+            bindings = <&kp UNDER>;
+            key-positions = <4 5>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        combo_tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <13 14>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        combo_grade {
+            bindings = <&kp GRAVE>;
+            key-positions = <14 15>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        combo_lpar {
+            bindings = <&kp LPAR>;
+            key-positions = <15 16>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        combo_hash {
+            bindings = <&kp HASH>;
+            key-positions = <16 17>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        combo_pbrc {
+            bindings = <&kp LBRC>;
+            key-positions = <28 28 27>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        combo_prcnt {
+            bindings = <&kp PRCNT>;
+            key-positions = <28 28 29>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        combo_excl {
+            bindings = <&kp EXCL>;
+            key-positions = <6 7>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        combo_rbkt {
+            bindings = <&kp RBKT>;
+            key-positions = <7 8>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        combo_gt {
+            bindings = <&kp GT>;
+            key-positions = <8 9>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        combo_at {
+            bindings = <&kp AT>;
+            key-positions = <18 19>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        combo_rpar {
+            bindings = <&kp RPAR>;
+            key-positions = <19 20>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        combo_bslh {
+            bindings = <&kp BSLH>;
+            key-positions = <20 21>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        combo_pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <21 22>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        combo_caret {
+            bindings = <&kp CARET>;
+            key-positions = <30 31>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        combo_rbrc {
+            bindings = <&kp RBRC>;
+            key-positions = <31 32>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        combo_bspc {
+            bindings = <&kp BSPC>;
+            key-positions = <19 20>;
+            timeout-ms = <50>;
+            layers = <3>;
         };
     };
 
@@ -79,47 +202,40 @@
 
         NUM {
             bindings = <
-&none  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS    &kp KP_MINUS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL     &none
-&none  &none     &none     &none      &none      &none       &kp KP_PLUS   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &none
-&none  &none     &none     &none      &none      &none       &kp KP_EQUAL  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE    &none
-                           &none      &none      &none       &kp KP_ENTER  &kp KP_NUMBER_0  &none
+&none  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS    &kp KP_MINUS    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL     &none
+&none  &none     &none     &none      &none      &none       &kp KP_PLUS     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &none
+&none  &none     &none     &none      &none      &none       &kp KP_EQUAL    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE    &none
+                           &none      &none      &none       &lt 4 KP_ENTER  &kp KP_NUMBER_0  &none
             >;
         };
 
         FUN {
             bindings = <
-&none  &none  &kp F7  &kp F8  &kp F9  &kp F12    &none  &none  &none  &none  &none  &none
-&none  &none  &kp F4  &kp F5  &kp F6  &kp F11    &none  &none  &none  &none  &none  &none
-&none  &none  &kp F1  &kp F2  &kp F3  &kp F10    &none  &none  &none  &none  &none  &none
-                      &none   &none   &none      &none  &none  &none
+&none  &none  &kp F7  &kp F8  &kp F9  &kp F12    &none  &kp PRINTSCREEN  &none  &none  &none  &none
+&none  &none  &kp F4  &kp F5  &kp F6  &kp F11    &none  &kp LS(LG(S))    &none  &none  &none  &none
+&none  &none  &kp F1  &kp F2  &kp F3  &kp F10    &none  &none            &none  &none  &none  &tog 5
+                      &none   &none   &none      &none  &none            &none
             >;
         };
 
         GAMING {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&kp TAB    &kp Q  &kp W  &kp E     &kp R    &kp T        &kp Y    &kp U     &kp I      &kp O    &kp P     &kp BSPC
+&kp LSHFT  &kp A  &kp S  &kp D     &kp F    &kp G        &kp H    &kp J     &kp K      &kp L    &kp SEMI  &kp APOS
+&kp LCTRL  &kp Z  &kp X  &kp C     &kp V    &kp B        &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &tog 5
+                         &kp LALT  &kp ESC  &kp SPACE    &kp RET  &kp BSPC  &none
             >;
         };
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&kp C_AC_SAVE  &none  &none  &none  &none  &none    &none     &none           &none           &none         &none            &none
+&none          &none  &none  &none  &none  &none    &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+&bootloader    &none  &none  &none  &none  &none    &none     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+                             &none  &none  &none    &mkp MB1  &mkp MB3        &mkp MB2
             >;
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        Colemak {
-            if-layers = <0>;
-            then-layer = <1>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
