@@ -79,14 +79,14 @@
 
         combo_pbrc {
             bindings = <&kp LBRC>;
-            key-positions = <28 28 27>;
+            key-positions = <27 28>;
             timeout-ms = <50>;
             layers = <0 1>;
         };
 
         combo_prcnt {
             bindings = <&kp PRCNT>;
-            key-positions = <28 28 29>;
+            key-positions = <29 28>;
             timeout-ms = <50>;
             layers = <0 1>;
         };
