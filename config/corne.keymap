@@ -154,11 +154,11 @@
             layers = <0 1>;
         };
 
-        combo_bspc {
-            bindings = <&kp BSPC>;
-            key-positions = <19 20>;
+        caps_word {
+            bindings = <&c_caps_word>;
+            key-positions = <16 19>;
+            layers = <0 1>;
             timeout-ms = <50>;
-            layers = <3>;
         };
     };
 
@@ -214,6 +214,13 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        c_caps_word: c_caps_word {
+            compatible = "zmk,behavior-caps-word";
+            label = "C_CAPS_WORD";
+            #binding-cells = <0>;
+            continue-list = <MINUS BSPC UNDER>;
         };
     };
 
