@@ -244,13 +244,15 @@
             >;
         };
 
-        Colemak {
+        COLEMAK {
             bindings = <
 &kp GRAVE      &kp Q  &kp W  &kp F      &kp P          &kp B              &kp J      &kp L     &kp U      &kp Y    &kp SEMI  &bspc_del
 &lt_esc 7 ESC  &kp A  &kp R  &kp S      &kp T          &kp G              &kp M      &kp N     &kp E      &kp I    &kp O     &kp APOS
 &kp LSHFT      &kp Z  &kp X  &kp C      &kp D          &kp V              &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                              &kp LCTRL  &lt_tab 2 TAB  &lt_spc 3 SPACE    &kp ENTER  &kp RGUI  &kp RALT
             >;
+
+            label = "COLEMAK";
         };
 
         NAV {
@@ -260,15 +262,19 @@
 &trans  &none  &kp LC(X)          &kp LC(C)   &kp LC(V)        &none     &kp INS          &kp HOME        &kp PG_DN    &kp PG_UP  &kp END    &none
                                   &trans      &none            &trans    &trans           &trans          &trans
             >;
+
+            label = "NAV";
         };
 
         NUM {
             bindings = <
-&none   &kp HASH   &kp DLLR   &kp PRCNT  &kp CARET  &kp AMPS    &kp KP_MINUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp EQUAL        &trans
-&trans  &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI   &none       &kp KP_PLUS         &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &none
-&trans  &none      &none      &none      &none      &none       &kp EQUAL           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE    &none
-                              &none      &none      &none       &lt_ent 4 KP_ENTER  &kp KP_NUMBER_0  &kp KP_DOT
+&none   &kp HASH          &kp DLLR   &kp PRCNT  &kp CARET  &kp AMPS    &kp KP_MINUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp EQUAL        &trans
+&trans  &kp LSHFT         &kp LCTRL  &kp LALT   &kp LGUI   &none       &kp KP_PLUS         &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &none
+&trans  &kp K_CALCULATOR  &none      &none      &none      &none       &kp EQUAL           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE    &none
+                                     &none      &none      &none       &lt_ent 4 KP_ENTER  &kp KP_NUMBER_0  &kp KP_DOT
             >;
+
+            label = "NUM";
         };
 
         FUN {
@@ -278,6 +284,8 @@
 &none   &none  &kp F1  &kp F2  &kp F3  &kp F10    &none            &none     &none     &none      &none      &tog 5
                        &none   &none   &none      &none            &none     &none
             >;
+
+            label = "FUN";
         };
 
         GAMING {
@@ -287,6 +295,8 @@
 &kp LCTRL  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &tog 5
                          &kp LALT  &lt 6 ESC  &kp SPACE    &kp RET  &kp BSPC  &none
             >;
+
+            label = "GAMING";
         };
 
         Gaming_2 {
@@ -296,6 +306,8 @@
 &trans  &none   &none   &none   &none   &none     &none  &none  &none  &none  &none  &none
                         &trans  &none   &trans    &none  &none  &none
             >;
+
+            label = "Gaming_2";
         };
 
         MOUSE {
@@ -305,6 +317,8 @@
 &bootloader    &none  &none  &none  &none  &none    &none     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
                              &none  &none  &none    &mkp MB1  &mkp MB3        &mkp MB2
             >;
+
+            label = "MOUSE";
         };
     };
 
