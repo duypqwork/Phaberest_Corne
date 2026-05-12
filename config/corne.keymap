@@ -257,10 +257,10 @@
 
         NAV {
             bindings = <
-&none   &none  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &none     &kp PRINTSCREEN  &kp SCROLLLOCK  &kp C_PAUSE  &none      &none      &trans
-&trans  &none  &kp C_PREV         &kp C_PLAY  &kp C_NEXT       &none     &kp C_AC_BACK    &kp LEFT        &kp DOWN     &kp UP     &kp RIGHT  &kp C_AC_FORWARD
-&trans  &none  &kp LC(X)          &kp LC(C)   &kp LC(V)        &none     &kp INS          &kp HOME        &kp PG_DN    &kp PG_UP  &kp END    &none
-                                  &trans      &none            &trans    &trans           &trans          &trans
+&none   &none   &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &none     &kp PRINTSCREEN  &kp SCROLLLOCK  &kp C_PAUSE  &none      &none      &trans
+&trans  &none   &kp C_PREV         &kp C_PLAY  &kp C_NEXT       &none     &kp C_AC_BACK    &kp LEFT        &kp DOWN     &kp UP     &kp RIGHT  &kp C_AC_FORWARD
+&trans  &kp F2  &kp LC(E)          &none       &none            &none     &kp INS          &kp HOME        &kp PG_DN    &kp PG_UP  &kp END    &none
+                                   &trans      &none            &trans    &trans           &trans          &trans
             >;
 
             label = "NAV";
@@ -268,10 +268,10 @@
 
         NUM {
             bindings = <
-&none   &kp HASH    &kp DLLR   &kp PRCNT  &kp CARET  &kp AMPS    &kp KP_MINUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp EQUAL        &trans
-&trans  &kp LSHFT   &kp LCTRL  &kp LALT   &kp LGUI   &none       &kp KP_PLUS         &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &none
-&trans  &kp K_CALC  &none      &none      &none      &none       &kp EQUAL           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE    &none
-                               &none      &none      &none       &lt_ent 4 KP_ENTER  &kp KP_NUMBER_0  &kp KP_DOT
+&none   &kp HASH       &kp DLLR   &kp PRCNT  &kp CARET  &kp AMPS    &kp KP_MINUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp EQUAL        &trans
+&trans  &kp LSHFT      &kp LCTRL  &kp LALT   &kp LGUI   &none       &kp KP_PLUS         &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &none
+&trans  &kp C_AL_CALC  &none      &none      &none      &none       &kp EQUAL           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE    &none
+                                  &none      &none      &none       &lt_ent 4 KP_ENTER  &kp KP_NUMBER_0  &kp KP_DOT
             >;
 
             label = "NUM";
