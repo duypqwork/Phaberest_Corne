@@ -259,7 +259,7 @@
             bindings = <
 &none   &none       &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &none     &kp PRINTSCREEN  &kp SCROLLLOCK  &kp C_PAUSE  &none      &none      &trans
 &trans  &kp C_MENU  &kp C_PREV         &kp C_PLAY  &kp C_NEXT       &none     &kp C_AC_BACK    &kp LEFT        &kp DOWN     &kp UP     &kp RIGHT  &kp C_AC_FORWARD
-&trans  &none       &kp LC(LS(E))      &none       &none            &none     &kp INS          &kp HOME        &kp PG_DN    &kp PG_UP  &kp END    &none
+&trans  &kp F2      &kp LC(LS(E))      &none       &none            &none     &kp INS          &kp HOME        &kp PG_DN    &kp PG_UP  &kp END    &trans
                                        &trans      &none            &trans    &trans           &trans          &trans
             >;
 
