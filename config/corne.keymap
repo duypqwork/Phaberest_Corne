@@ -257,9 +257,9 @@
 
         NAV {
             bindings = <
-&none   &none      &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &none        &kp PRINTSCREEN  &kp SCROLLLOCK  &kp C_PAUSE  &none      &none      &trans
-&trans  &kp K_APP  &kp C_PREV         &kp C_PLAY  &kp C_NEXT       &none        &kp C_AC_BACK    &kp LEFT        &kp DOWN     &kp UP     &kp RIGHT  &kp C_AC_FORWARD
-&trans  &kp F2     &kp LC(LS(E))      &kp LC(C)   &kp DEL          &kp LC(V)    &kp INS          &kp HOME        &kp PG_DN    &kp PG_UP  &kp END    &trans
+&none   &none      &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &none        &kp PRINTSCREEN  &kp SCROLLLOCK  &kp C_PAUSE  &kp KP_NUM  &none      &trans
+&trans  &kp K_APP  &kp C_PREV         &kp C_PLAY  &kp C_NEXT       &none        &kp C_AC_BACK    &kp LEFT        &kp DOWN     &kp UP      &kp RIGHT  &kp C_AC_FORWARD
+&trans  &kp F2     &kp LC(LS(E))      &kp LC(C)   &kp DEL          &kp LC(V)    &kp INS          &kp HOME        &kp PG_DN    &kp PG_UP   &kp END    &trans
                                       &trans      &none            &trans       &trans           &trans          &trans
             >;
 
