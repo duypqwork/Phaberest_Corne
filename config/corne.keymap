@@ -12,152 +12,136 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_to_COLEMAK {
-            bindings = <&to 1>;
-            key-positions = <24 35>;
-            layers = <0>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <125>;
-        };
-
-        combo_to_QWERTY {
-            bindings = <&to 0>;
-            key-positions = <35 24>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <125>;
-            layers = <1>;
-        };
-
         combo_lt {
             bindings = <&kp LT>;
             key-positions = <2 3>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         combo_lbkt {
             bindings = <&kp LBKT>;
             key-positions = <3 4>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         combo_under {
             bindings = <&kp UNDER>;
             key-positions = <4 5>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         combo_tilde {
             bindings = <&kp TILDE>;
             key-positions = <13 14>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         combo_grade {
             bindings = <&kp GRAVE>;
             key-positions = <14 15>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         combo_lpar {
             bindings = <&kp LPAR>;
             key-positions = <15 16>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         combo_hash {
             bindings = <&kp HASH>;
             key-positions = <16 17>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         combo_pbrc {
             bindings = <&kp LBRC>;
             key-positions = <27 28>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         combo_prcnt {
             bindings = <&kp PRCNT>;
             key-positions = <28 29>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         combo_excl {
             bindings = <&kp EXCL>;
             key-positions = <6 7>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         combo_rbkt {
             bindings = <&kp RBKT>;
             key-positions = <7 8>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         combo_gt {
             bindings = <&kp GT>;
             key-positions = <8 9>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         combo_at {
             bindings = <&kp AT>;
             key-positions = <18 19>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         combo_rpar {
             bindings = <&kp RPAR>;
             key-positions = <19 20>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         combo_bslh {
             bindings = <&kp BSLH>;
             key-positions = <20 21>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         combo_pipe {
             bindings = <&kp PIPE>;
             key-positions = <21 22>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         combo_caret {
             bindings = <&kp CARET>;
             key-positions = <30 31>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         combo_rbrc {
             bindings = <&kp RBRC>;
             key-positions = <31 32>;
             timeout-ms = <50>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         caps_word {
             bindings = <&c_caps_word>;
             key-positions = <16 19>;
-            layers = <0 1>;
+            layers = <0>;
             timeout-ms = <50>;
         };
     };
@@ -227,29 +211,12 @@
     keymap {
         compatible = "zmk,keymap";
 
-        QWERTY {
-            display-name = "Default Layer";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
-            bindings = <
-&kp GRAVE      &kp Q  &kp W  &kp E      &kp R          &kp T              &kp Y    &kp U     &kp I      &kp O    &kp P     &bspc_del
-&lt_esc 7 ESC  &kp A  &kp S  &kp D      &kp F          &kp G              &kp H    &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHIFT     &kp Z  &kp X  &kp C      &kp V          &kp B              &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
-                             &kp LCTRL  &lt_tab 2 TAB  &lt_spc 3 SPACE    &kp RET  &kp RGUI  &kp RALT
-            >;
-        };
-
         COLEMAK {
             bindings = <
 &kp GRAVE      &kp Q  &kp W  &kp F      &kp P          &kp B              &kp J      &kp L     &kp U      &kp Y    &kp SEMI  &bspc_del
-&lt_esc 7 ESC  &kp A  &kp R  &kp S      &kp T          &kp G              &kp M      &kp N     &kp E      &kp I    &kp O     &kp APOS
+&lt_esc 6 ESC  &kp A  &kp R  &kp S      &kp T          &kp G              &kp M      &kp N     &kp E      &kp I    &kp O     &kp APOS
 &kp LSHFT      &kp Z  &kp X  &kp C      &kp D          &kp V              &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                             &kp LCTRL  &lt_tab 2 TAB  &lt_spc 3 SPACE    &kp ENTER  &kp RGUI  &kp RALT
+                             &kp LCTRL  &lt_tab 1 TAB  &lt_spc 2 SPACE    &kp ENTER  &kp RGUI  &kp RALT
             >;
 
             label = "COLEMAK";
@@ -257,10 +224,10 @@
 
         NAV {
             bindings = <
-&none   &none      &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &none        &kp PRINTSCREEN  &kp SCROLLLOCK  &kp C_PAUSE  &kp KP_NUM  &none      &trans
-&trans  &kp K_APP  &kp C_PREV         &kp C_PLAY  &kp C_NEXT       &none        &kp C_AC_BACK    &kp LEFT        &kp DOWN     &kp UP      &kp RIGHT  &kp C_AC_FORWARD
-&trans  &kp F2     &kp LC(LS(E))      &kp LC(C)   &kp DEL          &kp LC(V)    &kp INS          &kp HOME        &kp PG_DN    &kp PG_UP   &kp END    &trans
-                                      &trans      &none            &trans       &trans           &trans          &trans
+&none   &kp LC(TAB)  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &kp LC(E)    &kp PRINTSCREEN  &kp SCROLLLOCK  &kp C_PAUSE  &kp KP_NUM  &none      &trans
+&trans  &kp K_APP    &kp C_PREV         &kp C_PLAY  &kp C_NEXT       &kp LC(F)    &kp C_AC_BACK    &kp LEFT        &kp DOWN     &kp UP      &kp RIGHT  &kp C_AC_FORWARD
+&trans  &kp F2       &kp LC(LS(E))      &kp LC(C)   &kp DEL          &kp LC(V)    &kp INS          &kp HOME        &kp PG_DN    &kp PG_UP   &kp END    &trans
+                                        &trans      &none            &trans       &trans           &trans          &trans
             >;
 
             label = "NAV";
@@ -271,7 +238,7 @@
 &none   &kp HASH       &kp DLLR   &kp PRCNT  &kp CARET  &kp AMPS    &kp KP_MINUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp EQUAL        &trans
 &trans  &kp LSHFT      &kp LCTRL  &kp LALT   &kp LGUI   &none       &kp KP_PLUS         &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &none
 &trans  &kp C_AL_CALC  &none      &none      &none      &none       &kp EQUAL           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE    &none
-                                  &none      &none      &none       &lt_ent 4 KP_ENTER  &kp KP_NUMBER_0  &kp KP_DOT
+                                  &none      &none      &none       &lt_ent 3 KP_ENTER  &kp KP_NUMBER_0  &kp KP_DOT
             >;
 
             label = "NUM";
@@ -281,7 +248,7 @@
             bindings = <
 &none   &none  &kp F7  &kp F8  &kp F9  &kp F12    &kp PRINTSCREEN  &none     &none     &none      &none      &trans
 &trans  &none  &kp F4  &kp F5  &kp F6  &kp F11    &kp LG(LS(S))    &kp RGUI  &kp RALT  &kp RCTRL  &kp RSHFT  &none
-&none   &none  &kp F1  &kp F2  &kp F3  &kp F10    &none            &none     &none     &none      &none      &tog 5
+&none   &none  &kp F1  &kp F2  &kp F3  &kp F10    &none            &none     &none     &none      &none      &tog 4
                        &none   &none   &none      &none            &none     &none
             >;
 
@@ -292,8 +259,8 @@
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y    &kp U     &kp I      &kp O    &kp P     &kp BSPC
 &kp LSHFT  &kp A  &kp S  &kp D     &kp F      &kp G        &kp H    &kp J     &kp K      &kp L    &kp SEMI  &kp APOS
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &tog 5
-                         &kp LALT  &lt 6 ESC  &kp SPACE    &kp RET  &kp BSPC  &none
+&kp LCTRL  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &tog 4
+                         &kp LALT  &lt 5 ESC  &kp SPACE    &kp RET  &kp BSPC  &none
             >;
 
             label = "GAMING";
